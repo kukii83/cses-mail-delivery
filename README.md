@@ -13,7 +13,7 @@ Group 5 Members:
 In this task, we are using three algorithms to use three algorithms, that is:
 - Fleury's
 - Hierholzer's
-- 
+- Naive Backtracking
 
 ---
 
