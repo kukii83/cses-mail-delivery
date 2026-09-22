@@ -107,8 +107,31 @@ With all 8 edges traversed, no unvisited edges remain across any vertex. The sta
 
 
 ---
+## Naive / Backtracking Search Algorithm
 
-HUSSEIN THIS IS YOUR SPOT
+The Naive / Backtracking Search Algorithm is a brute-force approach for finding an Eulerian Circuit (or Eulerian Path) in a connected graph by recursively exploring available unused edges and backtracking whenever a dead end is reached.
+
+**How It Works:**
+Check that an Eulerian circuit exists: every vertex must have an even degree, and the graph must be connected. If either check fails, no such route exists.
+Start at the initial vertex (here, vertex 1, the post office).
+At each step, choose an unused edge, mark it as used, append the destination vertex to the path, and recursively explore from the new vertex.
+If the algorithm reaches a dead end before all graph edges are visited, it triggers failure, backtracks by removing the last edge from the path, unmarks it, and tries the next available alternative branch.
+Once all edges have been successfully visited and the path returns to the starting vertex, a valid Eulerian circuit is found. The time complexity is exponential O(2^E) in the worst case due to exhaustive trial-and-error exploration
+
+A key drawback is that this trial-and-error backtracking approach makes it exceptionally slow and inefficient for large or dense graphs compared to linear-time alternatives like Hierholzer's algorithm.
+
+### Prerequisites
+- Python 3.x interpreter installed
+- Standard Python built-in libraries
+
+### Instructions
+- Copy the code
+- Open your compiler 
+- Paste the code
+- Run the code
+- Copy the sample input from the problem set given in the assignment
+
+### Results
 ![image alt](https://github.com/kukii83/cses-mail-delivery/blob/3b27dab702c60fccc1b8a61d71c9edc33910dbb7/Screenshot%202026-09-22%20224500.png)
 
 ---
