@@ -45,7 +45,7 @@ A key drawback is that this bridge-checking step makes Fleury's algorithm signif
 3.Execute the script:
 
 ```
-python fleury_interactive.py
+python fleury.py
 
 ```
 
@@ -116,3 +116,4 @@ AI tools usage disclosure:
 
 https://claude.ai/share/630bca29-ed64-4040-8697-890326603d80
 
+https://claude.ai/share/8a538e5e-e8c0-44e8-86f2-9d53a2c3395d
