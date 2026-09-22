@@ -1,7 +1,59 @@
-# cses-mail-delivery
-Assignment 3 for Informatics ITS Graph Theory Class Group 5
+# ITS Graph Theory class Group 5 Assignment 3
 
-## Fleury
+Group 5 Members:
+
+-Maulana Anugra Putra/5025251159 (kukii83)
+
+-I Gusti Agung Candra Nugraha/5025251169 (candranugraha576)
+
+-Hussein Mohammad Mahsun/5025251170 (TheDelightOFice)
+
+
+
+In this task, we are using three algorithms to use three algorithms, that is:
+- Fleury's
+- Hierholzer's
+- 
+
+---
+
+## Fleury's Algorithm
+
+Fleury's Algorithm is a classic approach for finding an Eulerian Circuit (or Eulerian Path) in a connected graph, a route that walks across every edge exactly once and returns to the starting vertex.
+
+**How It Works:**
+Check that an Eulerian circuit exists: every vertex must have an even degree, and the graph (restricted to vertices with edges) must be connected. If either check fails, no such route exists.
+Start at any vertex with edges (here, vertex 1, the post office).
+At each step, look at all unused edges leaving the current vertex. Prefer an edge that is not a bridge, i.e. removing it should not disconnect the remaining unused edges from where you stand. Only cross a bridge when it's the only option left.
+Mark the chosen edge as used, move to the vertex on its other end, and repeat until no unused edges remain.
+If every edge was used, the sequence of visited vertices is a valid Eulerian circuit. The time complexity is O(E · (V + E)), since each bridge check requires a full graph traversal, and this is repeated for close to every edge.
+
+A key drawback is that this bridge-checking step makes Fleury's algorithm significantly slower than alternatives like Hierholzer's algorithm (O(V + E)), which builds the circuit without needing to test for bridges at all.
+
+**Prerequisites**
+
+-Python 3.x+
+
+-No external third-party dependencies required
+
+**Instructions**
+
+1.Clone or download this repository containing fleury.py and fleury_interactive.py.
+
+2.Open your terminal or command prompt in the project directory.
+
+3.Execute the script:
+
+```
+python fleury_interactive.py
+
+```
+
+4.When prompted, enter the number of crossings and streets (n m), then enter each street as a pair of crossings a b, one per line. The script will print the resulting route, or IMPOSSIBLE if no Eulerian circuit exists.
+
+### Results
+
+<img width="550" height="324" alt="image" src="https://github.com/user-attachments/assets/b39fc51e-02b3-4235-8628-a597a89e126e" />
 
 ---
 
